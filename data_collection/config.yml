@@ -1,0 +1,938 @@
+settings:
+  repeats: 1
+  shuffle: true
+  dialects: [Jordanian, Palestinian, Syrian, Lebanese, Egyptian, Gulf, Iraqi, Other]
+  distances: [near, mid, far]
+  noise: [quiet, fan_ac, tv_music, people_talking, street]
+
+prompts:
+
+  # ---- LIGHT ----
+  - id: light_off_01
+    type: read
+    text: "طفي الضو"
+    action: {device: "light", action: "off"}
+  - id: light_off_02
+    type: read
+    text: "طفي الانارة"
+    action: {device: "light", action: "off"}
+  - id: light_off_03
+    type: read
+    text: "طفي الاضاءة"
+    action: {device: "light", action: "off"}
+  - id: light_off_04
+    type: read
+    text: "طفي النور"
+    action: {device: "light", action: "off"}
+  - id: light_off_05
+    type: read
+    text: "طفي اللمبة"
+    action: {device: "light", action: "off"}
+  - id: light_off_06
+    type: read
+    text: "اطفي الضو"
+    action: {device: "light", action: "off"}
+  - id: light_off_07
+    type: read
+    text: "اطفي الانارة"
+    action: {device: "light", action: "off"}
+  - id: light_off_08
+    type: read
+    text: "اطفي الاضاءة"
+    action: {device: "light", action: "off"}
+  - id: light_off_09
+    type: read
+    text: "اطفي النور"
+    action: {device: "light", action: "off"}
+  - id: light_off_10
+    type: read
+    text: "اطفي اللمبة"
+    action: {device: "light", action: "off"}
+  - id: light_off_11
+    type: read
+    text: "سكر الضو"
+    action: {device: "light", action: "off"}
+  - id: light_off_12
+    type: read
+    text: "سكر الانارة"
+    action: {device: "light", action: "off"}
+  - id: light_off_13
+    type: read
+    text: "سكر الاضاءة"
+    action: {device: "light", action: "off"}
+  - id: light_off_14
+    type: read
+    text: "سكر النور"
+    action: {device: "light", action: "off"}
+  - id: light_off_15
+    type: read
+    text: "سكر اللمبة"
+    action: {device: "light", action: "off"}
+  - id: light_off_16
+    type: read
+    text: "اطفيلي الضو"
+    action: {device: "light", action: "off"}
+  - id: light_off_17
+    type: read
+    text: "اطفيلي الانارة"
+    action: {device: "light", action: "off"}
+  - id: light_off_18
+    type: read
+    text: "اطفيلي الاضاءة"
+    action: {device: "light", action: "off"}
+  - id: light_off_19
+    type: read
+    text: "اطفيلي النور"
+    action: {device: "light", action: "off"}
+  - id: light_off_20
+    type: read
+    text: "اطفيلي اللمبة"
+    action: {device: "light", action: "off"}
+  - id: light_off_21
+    type: read
+    text: "سكرلي الضو"
+    action: {device: "light", action: "off"}
+  - id: light_off_22
+    type: read
+    text: "سكرلي الانارة"
+    action: {device: "light", action: "off"}
+  - id: light_off_23
+    type: read
+    text: "سكرلي الاضاءة"
+    action: {device: "light", action: "off"}
+  - id: light_off_24
+    type: read
+    text: "سكرلي النور"
+    action: {device: "light", action: "off"}
+  - id: light_off_25
+    type: read
+    text: "سكرلي اللمبة"
+    action: {device: "light", action: "off"}
+  - id: light_off_26
+    type: read
+    text: "سكرلي النور بالله"
+    action: {device: "light", action: "off"}
+  - id: light_off_27
+    type: read
+    text: "سكر الضو بالله"
+    action: {device: "light", action: "off"}
+  - id: light_off_28
+    type: read
+    text: "سكرلي الضو بالله"
+    action: {device: "light", action: "off"}
+  - id: light_off_29
+    type: read
+    text: "معلش تسكر الضو"
+    action: {device: "light", action: "off"}
+  - id: light_off_30
+    type: read
+    text: "معلش تطفي الضو"
+    action: {device: "light", action: "off"}
+  - id: light_off_31
+    type: read
+    text: "لو سمحت تطفي الضو"
+    action: {device: "light", action: "off"}
+  - id: light_off_32
+    type: read
+    text: "بدي اياك تطفي الضو"
+    action: {device: "light", action: "off"}
+  - id: light_off_33
+    type: read
+    text: "طفي الانارة لو سمحت"
+    action: {device: "light", action: "off"}
+  - id: light_off_34
+    type: read
+    text: "معلش تطفيلي النور"
+    action: {device: "light", action: "off"}
+  - id: light_off_35
+    type: read
+    text: "بالله طفي اللمبة"
+    action: {device: "light", action: "off"}
+  - id: light_off_36
+    type: read
+    text: "بدي اياك تسكر الانارة"
+    action: {device: "light", action: "off"}
+  - id: light_on_01
+    type: read
+    text: "شغل الضو"
+    action: {device: "light", action: "on"}
+  - id: light_on_02
+    type: read
+    text: "شغل الانارة"
+    action: {device: "light", action: "on"}
+  - id: light_on_03
+    type: read
+    text: "شغل الاضاءة"
+    action: {device: "light", action: "on"}
+  - id: light_on_04
+    type: read
+    text: "شغل النور"
+    action: {device: "light", action: "on"}
+  - id: light_on_05
+    type: read
+    text: "شغل اللمبة"
+    action: {device: "light", action: "on"}
+  - id: light_on_06
+    type: read
+    text: "اشعل الضو"
+    action: {device: "light", action: "on"}
+  - id: light_on_07
+    type: read
+    text: "اشعل الانارة"
+    action: {device: "light", action: "on"}
+  - id: light_on_08
+    type: read
+    text: "اشعل الاضاءة"
+    action: {device: "light", action: "on"}
+  - id: light_on_09
+    type: read
+    text: "اشعل النور"
+    action: {device: "light", action: "on"}
+  - id: light_on_10
+    type: read
+    text: "اشعل اللمبة"
+    action: {device: "light", action: "on"}
+  - id: light_on_11
+    type: read
+    text: "اضوي الضو"
+    action: {device: "light", action: "on"}
+  - id: light_on_12
+    type: read
+    text: "اضوي الانارة"
+    action: {device: "light", action: "on"}
+  - id: light_on_13
+    type: read
+    text: "اضوي الاضاءة"
+    action: {device: "light", action: "on"}
+  - id: light_on_14
+    type: read
+    text: "اضوي النور"
+    action: {device: "light", action: "on"}
+  - id: light_on_15
+    type: read
+    text: "اضوي اللمبة"
+    action: {device: "light", action: "on"}
+  - id: light_on_16
+    type: read
+    text: "ضوي الضو"
+    action: {device: "light", action: "on"}
+  - id: light_on_17
+    type: read
+    text: "ضوي الانارة"
+    action: {device: "light", action: "on"}
+  - id: light_on_18
+    type: read
+    text: "ضوي الاضاءة"
+    action: {device: "light", action: "on"}
+  - id: light_on_19
+    type: read
+    text: "ضوي النور"
+    action: {device: "light", action: "on"}
+  - id: light_on_20
+    type: read
+    text: "ضوي اللمبة"
+    action: {device: "light", action: "on"}
+  - id: light_on_21
+    type: read
+    text: "ولع الضو"
+    action: {device: "light", action: "on"}
+  - id: light_on_22
+    type: read
+    text: "ولع الانارة"
+    action: {device: "light", action: "on"}
+  - id: light_on_23
+    type: read
+    text: "ولع الاضاءة"
+    action: {device: "light", action: "on"}
+  - id: light_on_24
+    type: read
+    text: "ولع النور"
+    action: {device: "light", action: "on"}
+  - id: light_on_25
+    type: read
+    text: "ولع اللمبة"
+    action: {device: "light", action: "on"}
+  - id: light_on_26
+    type: read
+    text: "افتح الضو"
+    action: {device: "light", action: "on"}
+  - id: light_on_27
+    type: read
+    text: "افتح الانارة"
+    action: {device: "light", action: "on"}
+  - id: light_on_28
+    type: read
+    text: "افتح الاضاءة"
+    action: {device: "light", action: "on"}
+  - id: light_on_29
+    type: read
+    text: "افتح النور"
+    action: {device: "light", action: "on"}
+  - id: light_on_30
+    type: read
+    text: "افتح اللمبة"
+    action: {device: "light", action: "on"}
+  - id: light_on_31
+    type: read
+    text: "ولعلي الضو"
+    action: {device: "light", action: "on"}
+  - id: light_on_32
+    type: read
+    text: "شغللي الانارة"
+    action: {device: "light", action: "on"}
+  - id: light_on_33
+    type: read
+    text: "ضويلي النور"
+    action: {device: "light", action: "on"}
+  - id: light_on_34
+    type: read
+    text: "افتحلي الضو بالله"
+    action: {device: "light", action: "on"}
+  - id: light_on_35
+    type: read
+    text: "لو سمحت ولع الضو"
+    action: {device: "light", action: "on"}
+  - id: light_on_36
+    type: read
+    text: "معلش تشعل الانارة"
+    action: {device: "light", action: "on"}
+  - id: light_on_37
+    type: read
+    text: "بدي اياك تضوي الضو"
+    action: {device: "light", action: "on"}
+  - id: light_dim_01
+    type: read
+    text: "خفف الضو"
+    action: {device: "light", action: "dim"}
+  - id: light_dim_02
+    type: read
+    text: "خفف الانارة"
+    action: {device: "light", action: "dim"}
+  - id: light_dim_03
+    type: read
+    text: "خفف الاضاءة"
+    action: {device: "light", action: "dim"}
+  - id: light_dim_04
+    type: read
+    text: "خفف النور"
+    action: {device: "light", action: "dim"}
+  - id: light_dim_05
+    type: read
+    text: "خفف اللمبة"
+    action: {device: "light", action: "dim"}
+  - id: light_dim_06
+    type: read
+    text: "قلل الضو"
+    action: {device: "light", action: "dim"}
+  - id: light_dim_07
+    type: read
+    text: "قلل الانارة"
+    action: {device: "light", action: "dim"}
+  - id: light_dim_08
+    type: read
+    text: "قلل الاضاءة"
+    action: {device: "light", action: "dim"}
+  - id: light_dim_09
+    type: read
+    text: "قلل النور"
+    action: {device: "light", action: "dim"}
+  - id: light_dim_10
+    type: read
+    text: "قلل اللمبة"
+    action: {device: "light", action: "dim"}
+  - id: light_dim_11
+    type: read
+    text: "وطي الضو"
+    action: {device: "light", action: "dim"}
+  - id: light_dim_12
+    type: read
+    text: "وطي الانارة"
+    action: {device: "light", action: "dim"}
+  - id: light_dim_13
+    type: read
+    text: "وطي الاضاءة"
+    action: {device: "light", action: "dim"}
+  - id: light_dim_14
+    type: read
+    text: "وطي النور"
+    action: {device: "light", action: "dim"}
+  - id: light_dim_15
+    type: read
+    text: "وطي اللمبة"
+    action: {device: "light", action: "dim"}
+  - id: light_dim_16
+    type: read
+    text: "الانارة عالية خففها"
+    action: {device: "light", action: "dim"}
+  - id: light_dim_17
+    type: read
+    text: "الانارة عالية وطيها"
+    action: {device: "light", action: "dim"}
+  - id: light_dim_18
+    type: read
+    text: "الضو قوي خففه"
+    action: {device: "light", action: "dim"}
+  - id: light_dim_19
+    type: read
+    text: "الضو قوي كتير وطيه"
+    action: {device: "light", action: "dim"}
+  - id: light_dim_20
+    type: read
+    text: "خفف الضو شوي"
+    action: {device: "light", action: "dim"}
+  - id: light_dim_21
+    type: read
+    text: "قلل الانارة حبة"
+    action: {device: "light", action: "dim"}
+  - id: light_dim_22
+    type: read
+    text: "خففلي الضو بالله"
+    action: {device: "light", action: "dim"}
+  - id: light_dim_23
+    type: read
+    text: "النور عالي خففه"
+    action: {device: "light", action: "dim"}
+  - id: light_brighten_01
+    type: read
+    text: "علي الضو"
+    action: {device: "light", action: "brighten"}
+  - id: light_brighten_02
+    type: read
+    text: "علي الانارة"
+    action: {device: "light", action: "brighten"}
+  - id: light_brighten_03
+    type: read
+    text: "علي الاضاءة"
+    action: {device: "light", action: "brighten"}
+  - id: light_brighten_04
+    type: read
+    text: "علي النور"
+    action: {device: "light", action: "brighten"}
+  - id: light_brighten_05
+    type: read
+    text: "زيد الضو"
+    action: {device: "light", action: "brighten"}
+  - id: light_brighten_06
+    type: read
+    text: "زيد الانارة"
+    action: {device: "light", action: "brighten"}
+  - id: light_brighten_07
+    type: read
+    text: "زيد الاضاءة"
+    action: {device: "light", action: "brighten"}
+  - id: light_brighten_08
+    type: read
+    text: "زيد النور"
+    action: {device: "light", action: "brighten"}
+  - id: light_brighten_09
+    type: read
+    text: "قوي الضو"
+    action: {device: "light", action: "brighten"}
+  - id: light_brighten_10
+    type: read
+    text: "قوي الانارة"
+    action: {device: "light", action: "brighten"}
+  - id: light_brighten_11
+    type: read
+    text: "قوي الاضاءة"
+    action: {device: "light", action: "brighten"}
+  - id: light_brighten_12
+    type: read
+    text: "قوي النور"
+    action: {device: "light", action: "brighten"}
+  - id: light_brighten_13
+    type: read
+    text: "الانارة واطية عليها"
+    action: {device: "light", action: "brighten"}
+  - id: light_brighten_14
+    type: read
+    text: "الضو واطي عليه"
+    action: {device: "light", action: "brighten"}
+  - id: light_brighten_15
+    type: read
+    text: "الضو واطي علي الانارة بالله"
+    action: {device: "light", action: "brighten"}
+  - id: light_brighten_16
+    type: read
+    text: "الضو ضعيف زيده"
+    action: {device: "light", action: "brighten"}
+  - id: light_brighten_17
+    type: read
+    text: "النور واطي عليه شوي"
+    action: {device: "light", action: "brighten"}
+  - id: light_brighten_18
+    type: read
+    text: "عليلي الضو حبة"
+    action: {device: "light", action: "brighten"}
+  - id: light_set_01
+    type: read
+    text: "خلي الضو على النص"
+    action: {device: "light", action: "set", value: 50}
+  - id: light_set_02
+    type: read
+    text: "حط الانارة على النص"
+    action: {device: "light", action: "set", value: 50}
+  - id: light_set_03
+    type: read
+    text: "خلي الانارة على خمسين بالمية"
+    action: {device: "light", action: "set", value: 50}
+  - id: light_set_04
+    type: read
+    text: "خلي الضو على تلاتين بالمية"
+    action: {device: "light", action: "set", value: 30}
+  - id: light_set_05
+    type: read
+    text: "حط الاضاءة على تلاتين"
+    action: {device: "light", action: "set", value: 30}
+
+  # ---- AC ----
+  - id: ac_on_01
+    type: read
+    text: "شغل المكيف"
+    action: {device: "ac", action: "on"}
+  - id: ac_on_02
+    type: read
+    text: "شغل التكييف"
+    action: {device: "ac", action: "on"}
+  - id: ac_on_03
+    type: read
+    text: "شغل الAC"
+    action: {device: "ac", action: "on"}
+  - id: ac_on_04
+    type: read
+    text: "شغل الكونديشن"
+    action: {device: "ac", action: "on"}
+  - id: ac_on_05
+    type: read
+    text: "اشعل المكيف"
+    action: {device: "ac", action: "on"}
+  - id: ac_on_06
+    type: read
+    text: "اشعل التكييف"
+    action: {device: "ac", action: "on"}
+  - id: ac_on_07
+    type: read
+    text: "اشعل الAC"
+    action: {device: "ac", action: "on"}
+  - id: ac_on_08
+    type: read
+    text: "اشعل الكونديشن"
+    action: {device: "ac", action: "on"}
+  - id: ac_on_09
+    type: read
+    text: "ضوي المكيف"
+    action: {device: "ac", action: "on"}
+  - id: ac_on_10
+    type: read
+    text: "ضوي التكييف"
+    action: {device: "ac", action: "on"}
+  - id: ac_on_11
+    type: read
+    text: "ضوي الAC"
+    action: {device: "ac", action: "on"}
+  - id: ac_on_12
+    type: read
+    text: "ضوي الكونديشن"
+    action: {device: "ac", action: "on"}
+  - id: ac_on_13
+    type: read
+    text: "ولع المكيف"
+    action: {device: "ac", action: "on"}
+  - id: ac_on_14
+    type: read
+    text: "ولع التكييف"
+    action: {device: "ac", action: "on"}
+  - id: ac_on_15
+    type: read
+    text: "ولع الAC"
+    action: {device: "ac", action: "on"}
+  - id: ac_on_16
+    type: read
+    text: "ولع الكونديشن"
+    action: {device: "ac", action: "on"}
+  - id: ac_on_17
+    type: read
+    text: "افتح المكيف"
+    action: {device: "ac", action: "on"}
+  - id: ac_on_18
+    type: read
+    text: "شغللي المكيف بالله"
+    action: {device: "ac", action: "on"}
+  - id: ac_on_19
+    type: read
+    text: "لو سمحت شغل الAC"
+    action: {device: "ac", action: "on"}
+  - id: ac_off_01
+    type: read
+    text: "طفي المكيف"
+    action: {device: "ac", action: "off"}
+  - id: ac_off_02
+    type: read
+    text: "طفي التكييف"
+    action: {device: "ac", action: "off"}
+  - id: ac_off_03
+    type: read
+    text: "طفي الAC"
+    action: {device: "ac", action: "off"}
+  - id: ac_off_04
+    type: read
+    text: "طفي الكونديشن"
+    action: {device: "ac", action: "off"}
+  - id: ac_off_05
+    type: read
+    text: "اطفي المكيف"
+    action: {device: "ac", action: "off"}
+  - id: ac_off_06
+    type: read
+    text: "اطفي التكييف"
+    action: {device: "ac", action: "off"}
+  - id: ac_off_07
+    type: read
+    text: "اطفي الAC"
+    action: {device: "ac", action: "off"}
+  - id: ac_off_08
+    type: read
+    text: "اطفي الكونديشن"
+    action: {device: "ac", action: "off"}
+  - id: ac_off_09
+    type: read
+    text: "سكر المكيف"
+    action: {device: "ac", action: "off"}
+  - id: ac_off_10
+    type: read
+    text: "سكر التكييف"
+    action: {device: "ac", action: "off"}
+  - id: ac_off_11
+    type: read
+    text: "سكر الAC"
+    action: {device: "ac", action: "off"}
+  - id: ac_off_12
+    type: read
+    text: "سكر الكونديشن"
+    action: {device: "ac", action: "off"}
+  - id: ac_off_13
+    type: read
+    text: "اطفيلي المكيف"
+    action: {device: "ac", action: "off"}
+  - id: ac_off_14
+    type: read
+    text: "اطفيلي التكييف"
+    action: {device: "ac", action: "off"}
+  - id: ac_off_15
+    type: read
+    text: "اطفيلي الAC"
+    action: {device: "ac", action: "off"}
+  - id: ac_off_16
+    type: read
+    text: "اطفيلي الكونديشن"
+    action: {device: "ac", action: "off"}
+  - id: ac_off_17
+    type: read
+    text: "سكرلي المكيف بالله"
+    action: {device: "ac", action: "off"}
+  - id: ac_off_18
+    type: read
+    text: "معلش تطفي التكييف"
+    action: {device: "ac", action: "off"}
+  - id: ac_off_19
+    type: read
+    text: "لو سمحت سكر الAC"
+    action: {device: "ac", action: "off"}
+  - id: ac_set_01
+    type: read
+    text: "حط المكيف على ٢٢"
+    action: {device: "ac", action: "set", value: 22}
+  - id: ac_set_02
+    type: read
+    text: "علي المكيف ل٢٢"
+    action: {device: "ac", action: "set", value: 22}
+  - id: ac_set_03
+    type: read
+    text: "خلي التكييف على ٢٢"
+    action: {device: "ac", action: "set", value: 22}
+  - id: ac_set_04
+    type: read
+    text: "حط الAC على ٢٢"
+    action: {device: "ac", action: "set", value: 22}
+  - id: ac_set_05
+    type: read
+    text: "وطي المكيف ل١٨"
+    action: {device: "ac", action: "set", value: 18}
+  - id: ac_set_06
+    type: read
+    text: "حط المكيف على ١٨"
+    action: {device: "ac", action: "set", value: 18}
+  - id: ac_set_07
+    type: read
+    text: "خلي المكيف على ٢٤"
+    action: {device: "ac", action: "set", value: 24}
+  - id: ac_set_08
+    type: read
+    text: "حط التكييف على ٢٠"
+    action: {device: "ac", action: "set", value: 20}
+  - id: ac_set_09
+    type: read
+    text: "نزل الAC ل٢٠"
+    action: {device: "ac", action: "set", value: 20}
+  - id: ac_temp_up_01
+    type: read
+    text: "علي المكيف درجة"
+    action: {device: "ac", action: "temp_up", value: 1}
+  - id: ac_temp_up_02
+    type: read
+    text: "زيد التكييف درجة"
+    action: {device: "ac", action: "temp_up", value: 1}
+  - id: ac_temp_up_03
+    type: read
+    text: "علي الAC درجة"
+    action: {device: "ac", action: "temp_up", value: 1}
+  - id: ac_temp_up_04
+    type: read
+    text: "علي المكيف درجتين"
+    action: {device: "ac", action: "temp_up", value: 2}
+  - id: ac_temp_up_05
+    type: read
+    text: "زيد المكيف درجتين"
+    action: {device: "ac", action: "temp_up", value: 2}
+  - id: ac_temp_down_01
+    type: read
+    text: "وطي المكيف درجة"
+    action: {device: "ac", action: "temp_down", value: 1}
+  - id: ac_temp_down_02
+    type: read
+    text: "نزل التكييف درجة"
+    action: {device: "ac", action: "temp_down", value: 1}
+  - id: ac_temp_down_03
+    type: read
+    text: "وطي الAC درجة"
+    action: {device: "ac", action: "temp_down", value: 1}
+  - id: ac_temp_down_04
+    type: read
+    text: "وطي المكيف درجتين"
+    action: {device: "ac", action: "temp_down", value: 2}
+  - id: ac_temp_down_05
+    type: read
+    text: "نزل المكيف درجتين"
+    action: {device: "ac", action: "temp_down", value: 2}
+  - id: ac_decrease_01
+    type: read
+    text: "خفف التكييف"
+    action: {device: "ac", action: "decrease"}
+  - id: ac_decrease_02
+    type: read
+    text: "خفف المكيف"
+    action: {device: "ac", action: "decrease"}
+  - id: ac_decrease_03
+    type: read
+    text: "خفف الAC"
+    action: {device: "ac", action: "decrease"}
+  - id: ac_decrease_04
+    type: read
+    text: "قلل التكييف"
+    action: {device: "ac", action: "decrease"}
+  - id: ac_decrease_05
+    type: read
+    text: "خفف التكييف حبة"
+    action: {device: "ac", action: "decrease", steps: 1}
+  - id: ac_decrease_06
+    type: read
+    text: "خفف المكيف شوي"
+    action: {device: "ac", action: "decrease", steps: 1}
+  - id: ac_decrease_07
+    type: read
+    text: "خففلي الAC شوي"
+    action: {device: "ac", action: "decrease", steps: 1}
+  - id: ac_decrease_08
+    type: read
+    text: "خفف التكييف حبتين"
+    action: {device: "ac", action: "decrease", steps: 2}
+  - id: ac_decrease_09
+    type: read
+    text: "خفف المكيف كتير"
+    action: {device: "ac", action: "decrease", steps: 3}
+  - id: ac_increase_01
+    type: read
+    text: "قوي المكيف"
+    action: {device: "ac", action: "increase"}
+  - id: ac_increase_02
+    type: read
+    text: "قوي التكييف"
+    action: {device: "ac", action: "increase"}
+  - id: ac_increase_03
+    type: read
+    text: "زيد التكييف"
+    action: {device: "ac", action: "increase"}
+  - id: ac_increase_04
+    type: read
+    text: "قوي المكيف شوي"
+    action: {device: "ac", action: "increase", steps: 1}
+  - id: ac_increase_05
+    type: read
+    text: "زيد التكييف حبة"
+    action: {device: "ac", action: "increase", steps: 1}
+  - id: ac_increase_06
+    type: read
+    text: "قوي المكيف كتير"
+    action: {device: "ac", action: "increase", steps: 3}
+
+  # ---- SHADES ----
+  - id: shades_close_01
+    type: read
+    text: "سكر الاباجور"
+    action: {device: "shades", action: "close"}
+  - id: shades_close_02
+    type: read
+    text: "سكر البرادي"
+    action: {device: "shades", action: "close"}
+  - id: shades_close_03
+    type: read
+    text: "سكر الستارة"
+    action: {device: "shades", action: "close"}
+  - id: shades_close_04
+    type: read
+    text: "سكرلي الاباجور"
+    action: {device: "shades", action: "close"}
+  - id: shades_close_05
+    type: read
+    text: "سكرلي البرادي"
+    action: {device: "shades", action: "close"}
+  - id: shades_close_06
+    type: read
+    text: "سكرلي الستارة"
+    action: {device: "shades", action: "close"}
+  - id: shades_close_07
+    type: read
+    text: "نزل الاباجور"
+    action: {device: "shades", action: "close"}
+  - id: shades_close_08
+    type: read
+    text: "نزللي الاباجور"
+    action: {device: "shades", action: "close"}
+  - id: shades_close_09
+    type: read
+    text: "سكر الاباجور للآخر"
+    action: {device: "shades", action: "close"}
+  - id: shades_close_10
+    type: read
+    text: "سكر الاباجور تماما"
+    action: {device: "shades", action: "close"}
+  - id: shades_close_11
+    type: read
+    text: "نزل الاباجور للآخر"
+    action: {device: "shades", action: "close"}
+  - id: shades_close_12
+    type: read
+    text: "سكر البرادي للآخر"
+    action: {device: "shades", action: "close"}
+  - id: shades_close_13
+    type: read
+    text: "سكرلي الاباجور بالله"
+    action: {device: "shades", action: "close"}
+  - id: shades_close_14
+    type: read
+    text: "لو سمحت سكر البرادي"
+    action: {device: "shades", action: "close"}
+  - id: shades_open_01
+    type: read
+    text: "افتح الاباجور"
+    action: {device: "shades", action: "open"}
+  - id: shades_open_02
+    type: read
+    text: "افتح البرادي"
+    action: {device: "shades", action: "open"}
+  - id: shades_open_03
+    type: read
+    text: "افتح الستارة"
+    action: {device: "shades", action: "open"}
+  - id: shades_open_04
+    type: read
+    text: "افتحلي الاباجور"
+    action: {device: "shades", action: "open"}
+  - id: shades_open_05
+    type: read
+    text: "افتحلي البرادي"
+    action: {device: "shades", action: "open"}
+  - id: shades_open_06
+    type: read
+    text: "افتحلي الستارة"
+    action: {device: "shades", action: "open"}
+  - id: shades_open_07
+    type: read
+    text: "طلع الاباجور"
+    action: {device: "shades", action: "open"}
+  - id: shades_open_08
+    type: read
+    text: "ارفع الاباجور"
+    action: {device: "shades", action: "open"}
+  - id: shades_open_09
+    type: read
+    text: "افتح الاباجور على الآخر"
+    action: {device: "shades", action: "open"}
+  - id: shades_open_10
+    type: read
+    text: "طلع الاباجور للآخر"
+    action: {device: "shades", action: "open"}
+  - id: shades_open_11
+    type: read
+    text: "افتح البرادي على الآخر"
+    action: {device: "shades", action: "open"}
+  - id: shades_open_12
+    type: read
+    text: "افتحلي الاباجور بالله"
+    action: {device: "shades", action: "open"}
+  - id: shades_open_13
+    type: read
+    text: "معلش تفتح البرادي"
+    action: {device: "shades", action: "open"}
+  - id: shades_set_01
+    type: read
+    text: "سكر الاباجور للنص"
+    action: {device: "shades", action: "set", value: 50}
+  - id: shades_set_02
+    type: read
+    text: "سكر الاباجور للنص بالله"
+    action: {device: "shades", action: "set", value: 50}
+  - id: shades_set_03
+    type: read
+    text: "نزل الاباجور للنص"
+    action: {device: "shades", action: "set", value: 50}
+  - id: shades_set_04
+    type: read
+    text: "افتح الاباجور للنص"
+    action: {device: "shades", action: "set", value: 50}
+  - id: shades_set_05
+    type: read
+    text: "طلع الاباجور للنص"
+    action: {device: "shades", action: "set", value: 50}
+  - id: shades_set_06
+    type: read
+    text: "سكر البرادي للنص"
+    action: {device: "shades", action: "set", value: 50}
+  - id: shades_set_07
+    type: read
+    text: "افتح البرادي نصها"
+    action: {device: "shades", action: "set", value: 50}
+  - id: shades_set_08
+    type: read
+    text: "افتح تلات ارباع الاباجور"
+    action: {device: "shades", action: "set", value: 75}
+  - id: shades_set_09
+    type: read
+    text: "طلع الاباجور تلات ارباع"
+    action: {device: "shades", action: "set", value: 75}
+  - id: shades_set_10
+    type: read
+    text: "سكر ربع الاباجور"
+    action: {device: "shades", action: "set", value: 75}
+  - id: shades_set_11
+    type: read
+    text: "سكر تلات ارباع الاباجور"
+    action: {device: "shades", action: "set", value: 25}
+  - id: shades_set_12
+    type: read
+    text: "نزل الاباجور تلات ارباع"
+    action: {device: "shades", action: "set", value: 25}
+  - id: shades_set_13
+    type: read
+    text: "افتح ربع الاباجور"
+    action: {device: "shades", action: "set", value: 25}

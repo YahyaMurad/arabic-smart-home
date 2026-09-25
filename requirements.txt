@@ -1,0 +1,8 @@
+gradio==6.28.0
+soundfile
+scipy
+pyyaml
+numpy
+openai-whisper
+pandas
+jiwer
