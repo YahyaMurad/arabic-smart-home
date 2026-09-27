@@ -8,13 +8,14 @@ version = "0.1.0"
 description = "Arabic voice-command assistant for smart-home control"
 requires-python = ">=3.10"
 dependencies = [
-    "transformers",
-    "sounddevice",
-    "soundfile",
-    "silero-vad",
-    "openwakeword",
-    "numpy",
-    "pyyaml",
+    "torch==2.14.0",
+    "transformers==5.17.0",
+    "sounddevice==0.5.6",
+    "soundfile==0.14.0",
+    "silero-vad==6.2.3",
+    "openwakeword==0.4.0",
+    "numpy==2.5.3",
+    "pyyaml==6.0.3",
 ]
 
 [project.scripts]
