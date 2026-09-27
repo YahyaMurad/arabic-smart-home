@@ -9,12 +9,11 @@ import sounddevice as sd
 import soundfile as sf
 import torch
 from openwakeword.model import Model as WakeWordModel
-from peft import PeftModel
 from transformers import WhisperForConditionalGeneration
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from src.audio.vad import VoiceActivityDetector
-from src.config import ModelConfig, PathConfig
+from src.config import PathConfig
 from src.data.features import feature_extractor, tokenizer
 from src.nlu.keyword_matcher import KeywordMatcher
 
@@ -22,28 +21,20 @@ SAMPLE_RATE = 16000
 CHUNK_SIZE = 512  # Silero
 WAKE_WORD_THRESHOLD = 0.5
 WAKE_WORD = "alexa"
+MODEL_REPO_ID = "YahyaMujahed/whisper-small-arabic-smart-home"
 
 
 def run_assistant_loop(
-    model_config: ModelConfig | None = None,
+    repo_id: str = MODEL_REPO_ID,
     paths: PathConfig | None = None,
 ):
     vad = VoiceActivityDetector()
-    model_config = model_config or ModelConfig()
     paths = paths or PathConfig()
     debug_dir = paths.output_dir / "debug_utterances"
     debug_dir.mkdir(parents=True, exist_ok=True)
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
-    base_model = WhisperForConditionalGeneration.from_pretrained(
-        model_config.model_identifier
-    )
-    model = PeftModel.from_pretrained(
-        base_model, "output/whisper-finetuned/checkpoint-35"
-    )
-    model.generation_config.language = model_config.language
-    model.generation_config.task = model_config.task
-    model.generation_config.forced_decoder_ids = model_config.forced_decoder_ids
+    model = WhisperForConditionalGeneration.from_pretrained(repo_id)
     model.to(device)
     model.eval()
 
