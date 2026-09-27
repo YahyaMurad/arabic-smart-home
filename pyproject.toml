@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arabic-assistant"
+version = "0.1.0"
+description = "Arabic voice-command assistant for smart-home control"
+requires-python = ">=3.10"
+dependencies = [
+    "transformers",
+    "sounddevice",
+    "soundfile",
+    "silero-vad",
+    "openwakeword",
+    "numpy",
+    "pyyaml",
+]
+
+[project.scripts]
+arabic-assistant = "arabic_assistant.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["arabic_assistant*"]
+
+[tool.setuptools.package-data]
+arabic_assistant = ["data/*.yml"]
