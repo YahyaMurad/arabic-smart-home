@@ -4,10 +4,39 @@ from pathlib import Path
 
 import yaml
 
-from arabic_assistant.nlu.base import Action
+from arabic_assistant.nlu.base import (
+    ACAction,
+    ACCommand,
+    Command,
+    DeviceType,
+    LightAction,
+    LightCommand,
+    ShadesAction,
+    ShadesCommand,
+)
 from arabic_assistant.normalization import normalize_arabic
 
 DEFAULT_CONFIG_PATH = Path(__file__).resolve().parent.parent / "data" / "config.yml"
+
+# Which action enum, and which Command class, applies to each device.
+ACTIONS_BY_DEVICE = {
+    DeviceType.AC: ACAction,
+    DeviceType.LIGHT: LightAction,
+    DeviceType.SHADES: ShadesAction,
+}
+COMMAND_BY_DEVICE = {
+    DeviceType.AC: ACCommand,
+    DeviceType.LIGHT: LightCommand,
+    DeviceType.SHADES: ShadesCommand,
+}
+
+# ACCommand field that a trailing number in the transcript should fill,
+# per action. Actions not listed here take no extra value.
+EXTRA_KEY_BY_ACTION = {
+    (DeviceType.AC, ACAction.SET): "value",
+    (DeviceType.AC, ACAction.UP): "step",
+    (DeviceType.AC, ACAction.DOWN): "step",
+}
 
 
 class KeywordMatcher:
@@ -16,21 +45,22 @@ class KeywordMatcher:
         cfg = yaml.safe_load(config_path.read_text(encoding="utf-8"))
         prompts = cfg["prompts"]
 
-        device_words: dict[str, set[str]] = defaultdict(set)
-        action_words: dict[tuple[str, str], set[str]] = defaultdict(set)
-        extra_key: dict[tuple[str, str], str] = {}
+        device_words: dict[DeviceType, set[str]] = defaultdict(set)
+        action_words: dict[tuple[DeviceType, object], set[str]] = defaultdict(set)
 
         for p in prompts:
             act = p["action"]
-            device, action = act["device"], act["action"]
-            words = set(normalize_arabic(p["text"]).split())
+            device = DeviceType(act["device"])
+            action_enum = ACTIONS_BY_DEVICE[device]
+            try:
+                action = action_enum(act["action"])
+            except ValueError:
+                # Stale entry for an action this device no longer supports.
+                continue
 
+            words = set(normalize_arabic(p["text"]).split())
             device_words[device].update(words)
             action_words[(device, action)].update(words)
-
-            for key in ("value", "steps"):
-                if key in act:
-                    extra_key[(device, action)] = key
 
         # Words unique to one device (e.g. device noun) reliably identify it;
         # shared verbs do not, since they mean different things per device.
@@ -47,10 +77,9 @@ class KeywordMatcher:
             (device, action): words - self.device_unique_words[device]
             for (device, action), words in action_words.items()
         }
-        self.extra_key = extra_key
         self.devices = list(device_words)
 
-    def match(self, transcript: str) -> Action | None:
+    def match(self, transcript: str) -> Command | None:
         words = set(normalize_arabic(transcript).split())
 
         device = next(
@@ -65,11 +94,11 @@ class KeywordMatcher:
             if d == device
         ]
         action, best_overlap = max(candidates, key=lambda c: c[1], default=(None, 0))
-        if best_overlap == 0:
+        if action is None or best_overlap == 0:
             return None
 
         numbers = re.findall(r"\d+", normalize_arabic(transcript))
-        key = self.extra_key.get((device, action))
+        key = EXTRA_KEY_BY_ACTION.get((device, action))
         kwargs = {key: int(numbers[0])} if key and numbers else {}
 
-        return Action(device=device, action=action, **kwargs)
+        return COMMAND_BY_DEVICE[device](action=action, **kwargs)
