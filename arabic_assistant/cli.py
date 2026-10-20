@@ -3,6 +3,7 @@ from pathlib import Path
 
 from .assistant import Assistant
 from .config import AssistantConfig
+from .sinks.composite_sink import CompositeSink
 
 
 def parse_args():
@@ -44,4 +45,4 @@ def main():
         if value is not None:
             setattr(config, field, value)
 
-    Assistant(config).run()
+    Assistant(config, sink=CompositeSink()).run()

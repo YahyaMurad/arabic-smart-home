@@ -5,7 +5,7 @@ import sounddevice as sd
 
 from arabic_assistant.config import AssistantConfig
 from arabic_assistant.listener import CHUNK_SIZE, SAMPLE_RATE, CommandListener
-from arabic_assistant.nlu.keyword_matcher import KeywordMatcher
+from arabic_assistant.nlu.decision_llm_matcher import DecisionLLMMatcher
 from arabic_assistant.sinks.base import Sink
 from arabic_assistant.sinks.stdout_sink import StdoutSink
 from arabic_assistant.transcriber import Transcriber
@@ -25,7 +25,7 @@ class Assistant:
             no_repeat_ngram_size=config.no_repeat_ngram_size,
             max_new_tokens=config.max_new_tokens,
         )
-        self.matcher = KeywordMatcher()
+        self.matcher = DecisionLLMMatcher()
         self.sink = sink or StdoutSink()
 
         self.utterance_queue: queue.Queue = queue.Queue()

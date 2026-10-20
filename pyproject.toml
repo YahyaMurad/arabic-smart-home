@@ -16,6 +16,8 @@ dependencies = [
     "openwakeword==0.4.0",
     "numpy==2.5.3",
     "pyyaml==6.0.3",
+    "greeclimate==3.2.0",
+    "tinytuya==1.17.6",
 ]
 
 [project.scripts]
